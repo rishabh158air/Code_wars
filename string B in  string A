@@ -1,0 +1,41 @@
+#include <stdbool.h>
+#include <string.h>
+
+bool solution(const char *string, const char *ending)
+{
+    //char main [100], end [20];
+    int size_main, size_end,count = 0;
+    size_main = strlen(string);
+    size_end = strlen(ending);
+    int i,j;
+    for (i = size_main - size_end,j = 0; i < size_main; i++,j++)
+    {
+        if (string[i] == ending[j] && size_)
+            count++;
+    }
+    if (count == size_end)
+        return true;
+    else
+        return false;
+    }
+
+int main ()
+{
+    solution("abc","bc");
+    return 0;
+}
+
+
+
+/*
+#include <criterion/criterion.h>
+
+bool solution(const char *string, const char *ending);
+
+Test(solution, should_pass_all_the_tests_provided)
+{
+    cr_assert_eq(solution("abc", "bc"), true);
+    cr_assert_eq(solution("abc", "d"), false);
+    cr_assert_eq(solution("abc", ""), true);
+}
+*/
